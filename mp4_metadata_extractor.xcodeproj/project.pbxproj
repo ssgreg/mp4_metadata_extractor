@@ -10,6 +10,7 @@
 		EE43776118FA7C4500C5474E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE43776018FA7C4500C5474E /* Foundation.framework */; };
 		EE43776418FA7C4500C5474E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE43776318FA7C4500C5474E /* main.m */; };
 		EE43776818FA7C4500C5474E /* mp4_metadata_extractor.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE43776718FA7C4500C5474E /* mp4_metadata_extractor.1 */; };
+		EE43776F18FA7C8E00C5474E /* libmp4v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE43776E18FA7C8E00C5474E /* libmp4v2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		EE43776318FA7C4500C5474E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EE43776618FA7C4500C5474E /* mp4_metadata_extractor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mp4_metadata_extractor-Prefix.pch"; sourceTree = "<group>"; };
 		EE43776718FA7C4500C5474E /* mp4_metadata_extractor.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = mp4_metadata_extractor.1; sourceTree = "<group>"; };
+		EE43776E18FA7C8E00C5474E /* libmp4v2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmp4v2.a; path = "../Frameworks/mp4v2-2.0.0/libs/libmp4v2.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE43776F18FA7C8E00C5474E /* libmp4v2.a in Frameworks */,
 				EE43776118FA7C4500C5474E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +68,7 @@
 		EE43775F18FA7C4500C5474E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE43776E18FA7C8E00C5474E /* libmp4v2.a */,
 				EE43776018FA7C4500C5474E /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -221,6 +225,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mp4_metadata_extractor/mp4_metadata_extractor-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/igreg/Documents/Sandbox/Home/Frameworks/mp4v2-2.0.0/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/igreg/Documents/Sandbox/Home/Frameworks/mp4v2-2.0.0/libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -230,6 +243,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mp4_metadata_extractor/mp4_metadata_extractor-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/igreg/Documents/Sandbox/Home/Frameworks/mp4v2-2.0.0/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/igreg/Documents/Sandbox/Home/Frameworks/mp4v2-2.0.0/libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
